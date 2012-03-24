@@ -10,35 +10,43 @@
     <email>cornelius.howl@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2011-12-25</date>
-  <time>20:06:11</time>
+  <date>2012-03-24</date>
+  <time>18:31:03</time>
   <version>
-    <release>0.0.1</release>
-    <api>0.0.1</api>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
   </version>
   <stability>
-    <release>alpha</release>
-    <api>alpha</api>
+    <release>stable</release>
+    <api>stable</api>
   </stability>
   <license>PHP</license>
   <notes>-</notes>
   <contents>
     <dir name="/">
-      <file name="src/CascadingAttribute.php" role="php" md5sum="a30ab7dbd74db852fc92dde3c6b67c22"/>
+      <file name="tests/bootstrap.php" role="test" md5sum="b805c1c4ad52d54cb97ceef8f42e13bb"/>
+      <file name="tests/CascadingAttributeTest.php" role="test" md5sum="5198be47c4fe5a751849f826c9b4e8c7"/>
+      <file name="src/CascadingAttribute.php" role="php" md5sum="28b639789cfb1e8066ef69885c5c54ff"/>
     </dir>
   </contents>
   <dependencies>
     <required>
-      <php>
-        <min>5.3</min>
-      </php>
-      <pearinstaller>
-        <min>1.4</min>
-      </pearinstaller>
+      <package>
+        <name>Universal</name>
+        <channel>pear.corneltek.com</channel>
+        <min>0.0.0</min>
+      </package>
+      <package>
+        <name>PHPUnit_TestMore</name>
+        <channel>pear.corneltek.com</channel>
+        <min>0.0.0</min>
+      </package>
     </required>
   </dependencies>
   <phprelease>
     <filelist>
+      <install name="tests/bootstrap.php" as="bootstrap.php"/>
+      <install name="tests/CascadingAttributeTest.php" as="CascadingAttributeTest.php"/>
       <install name="src/CascadingAttribute.php" as="CascadingAttribute.php"/>
     </filelist>
   </phprelease>
