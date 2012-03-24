@@ -11,7 +11,7 @@
     <active>yes</active>
   </lead>
   <date>2012-03-24</date>
-  <time>18:31:03</time>
+  <time>18:31:42</time>
   <version>
     <release>1.0.1</release>
     <api>1.0.1</api>
@@ -31,6 +31,12 @@
   </contents>
   <dependencies>
     <required>
+      <php>
+        <min>5.3</min>
+      </php>
+      <pearinstaller>
+        <min>1.4</min>
+      </pearinstaller>
       <package>
         <name>Universal</name>
         <channel>pear.corneltek.com</channel>
