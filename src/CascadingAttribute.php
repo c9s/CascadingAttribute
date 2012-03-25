@@ -89,47 +89,47 @@ class CascadingAttribute
                         $this->attributes[ $name ] = $args[0];
                     }
                     else {
-                        throw new Exception("attribute value of $method is not a string.");
+                        throw new Exception("attribute value of $name is not a string.");
                     }
                     break;
 
                 case self::ATTR_INTEGER:
                     if( is_integer($args[0])) {
-                        $this->attributes[ $method ] = $args[0];
+                        $this->attributes[ $name ] = $args[0];
                     }
                     else {
-                        throw new Exception("attribute value of $method is not a integer.");
+                        throw new Exception("attribute value of $name is not a integer.");
                     }
                     break;
 
                 case self::ATTR_CALLABLE:
 
                     /**
-                     * handle for __invoke, array($obj,$method), 'function_name 
+                     * handle for __invoke, array($obj,$name), 'function_name 
                      */
                     if( is_callable($args[0]) ) {
-                        $this->attributes[ $method ] = $args[0];
+                        $this->attributes[ $name ] = $args[0];
                     } else {
-                        throw new Exception("attribute value of $method is not callable type.");
+                        throw new Exception("attribute value of $name is not callable type.");
                     }
                     break;
 
                 case self::ATTR_FLAG:
-                    $this->attributes[ $method ] = true;
+                    $this->attributes[ $name ] = true;
                     break;
 
                 default:
-                    throw new Exception("Unsupported attribute type: $method");
+                    throw new Exception("Unsupported attribute type: $name");
             }
             return $this;
         }
 
         // save unknown attribute by default
         if( $this->allowUndefinedAttribute ) {
-            $this->attributes[ $method ] = $args[0];
+            $this->attributes[ $name ] = $args[0];
         }
         else {
-            throw new Exception("Undefined attribute $method, Do you want to use allowUndefinedAttribute option?");
+            throw new Exception("Undefined attribute $name, Do you want to use allowUndefinedAttribute option?");
         }
 
     }
