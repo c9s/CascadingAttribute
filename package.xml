@@ -10,11 +10,11 @@
     <email>cornelius.howl@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2012-03-24</date>
-  <time>18:31:42</time>
+  <date>2012-03-26</date>
+  <time>03:28:04</time>
   <version>
-    <release>1.0.1</release>
-    <api>1.0.1</api>
+    <release>1.0.2</release>
+    <api>1.0.2</api>
   </version>
   <stability>
     <release>stable</release>
@@ -26,7 +26,7 @@
     <dir name="/">
       <file name="tests/bootstrap.php" role="test" md5sum="b805c1c4ad52d54cb97ceef8f42e13bb"/>
       <file name="tests/CascadingAttributeTest.php" role="test" md5sum="5198be47c4fe5a751849f826c9b4e8c7"/>
-      <file name="src/CascadingAttribute.php" role="php" md5sum="28b639789cfb1e8066ef69885c5c54ff"/>
+      <file name="src/CascadingAttribute.php" role="php" md5sum="7e11c2f5f21a55f9076c348d21bebd90"/>
     </dir>
   </contents>
   <dependencies>
