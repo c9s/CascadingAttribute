@@ -57,7 +57,7 @@ class CascadingAttribute
     public function _setAttribute($name,$arg)
     {
         if( property_exists($this,$name) ) {
-            $this->name = $arg;
+            $this->$name = $arg;
         } else {
             $this->attributes[ $name ] = $arg;
         }
