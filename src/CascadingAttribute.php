@@ -54,9 +54,19 @@ class CascadingAttribute
         $this->attributes[ $name ] = $value;
     }
 
+    public function _setAttribute($name,$arg)
+    {
+        if( property_exists($this,$name) ) {
+            $this->name = $arg;
+        } else {
+            $this->attributes[ $name ] = $arg;
+        }
+    }
+
     public function setAttribute($name,$args)
     {
-        if( isset($this->supportedAttributes[ $name ]) ) {
+        if( isset($this->supportedAttributes[ $name ]) ) 
+        {
             $c = count($args);
             $t = $this->supportedAttributes[ $name ];
 
@@ -64,29 +74,29 @@ class CascadingAttribute
                 throw new Exception( 'Attribute value is required.' );
             }
 
-            switch( $t ) {
-
+            switch( $t ) 
+            {
                 case self::ATTR_ANY:
-                    $this->attributes[ $name ] = $args[0];
+                    $this->_setAttribute( $name, $args[0] );
                     break;
 
                 case self::ATTR_ARRAY:
                     if( $c > 1 ) {
-                        $this->attributes[ $name ] = $args;
+                        $this->_setAttribute( $name,  $args );
                     }
                     elseif( is_array($args[0]) ) 
                     {
-                        $this->attributes[ $name ] = $args[0];
+                        $this->_setAttribute( $name , $args[0] );
                     } 
                     else
                     {
-                        $this->attributes[ $name ] = (array) $args[0];
+                        $this->_setAttribute( $name , (array) $args[0] );
                     }
                     break;
 
                 case self::ATTR_STRING:
                     if( is_string($args[0]) ) {
-                        $this->attributes[ $name ] = $args[0];
+                        $this->_setAttribute($name,$args[0]);
                     }
                     else {
                         throw new Exception("attribute value of $name is not a string.");
@@ -95,7 +105,7 @@ class CascadingAttribute
 
                 case self::ATTR_INTEGER:
                     if( is_integer($args[0])) {
-                        $this->attributes[ $name ] = $args[0];
+                        $this->_setAttribute( $name , $args[0] );
                     }
                     else {
                         throw new Exception("attribute value of $name is not a integer.");
@@ -108,14 +118,14 @@ class CascadingAttribute
                      * handle for __invoke, array($obj,$name), 'function_name 
                      */
                     if( is_callable($args[0]) ) {
-                        $this->attributes[ $name ] = $args[0];
+                        $this->_setAttribute( $name, $args[0] );
                     } else {
                         throw new Exception("attribute value of $name is not callable type.");
                     }
                     break;
 
                 case self::ATTR_FLAG:
-                    $this->attributes[ $name ] = true;
+                    $this->_setAttribute($name,true);
                     break;
 
                 default:
@@ -126,7 +136,7 @@ class CascadingAttribute
 
         // save unknown attribute by default
         if( $this->allowUndefinedAttribute ) {
-            $this->attributes[ $name ] = $args[0];
+            $this->_setAttribute( $name, $args[0] );
         }
         else {
             throw new Exception("Undefined attribute $name, Do you want to use allowUndefinedAttribute option?");
