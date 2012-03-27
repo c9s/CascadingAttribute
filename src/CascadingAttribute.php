@@ -68,6 +68,9 @@ class CascadingAttribute
     {
         if( isset( $this->attributes[ $name ] ) )
             return $this->attributes[ $name ];
+
+        $this->attributes[ $name ] = array();
+        return $this->attributes[ $name ];
     }
 
 
