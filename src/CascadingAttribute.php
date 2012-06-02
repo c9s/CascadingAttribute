@@ -33,27 +33,52 @@ class CascadingAttribute
         );
     }
 
+
+
+    /**
+     * Setup new attribute with type
+     *
+     * @param string $name  attribute name
+     * @param integer $type  attribute type
+     */
     public function setAttributeType( $name , $type ) 
     {
         $this->supportedAttributes[ $name ] = $type;
     }
 
+
+    /**
+     * Remove attribute
+     *
+     * @param string $name
+     */
     public function removeAttributeType($name)
     {
         unset( $this->supportedAttributes[ $name ] );
     }
 
+
+    /**
+     * Get attribute value
+     *
+     * @param string $name
+     * @return mixed value
+     */
     public function __get($name)
     {
         if( isset( $this->attributes[ $name ] ) )
             return $this->attributes[ $name ];
     }
 
+
+
+    /**
+     * Set attribute value
+     */
     public function __set($name,$value)
     {
         $this->attributes[ $name ] = $value;
     }
-
 
 
     // DEPRECATED
@@ -63,7 +88,7 @@ class CascadingAttribute
 
 
     /**
-     * Set attribute value
+     * Check property and set attribute value
      *
      * @param string $name
      * @param mixed $arg
@@ -196,8 +221,6 @@ class CascadingAttribute
     public function __toString() {
         return var_export( $this->attributes , true );
     }
-    
-    
     
 }
 
