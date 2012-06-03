@@ -10,11 +10,11 @@
     <email>cornelius.howl@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2012-03-27</date>
-  <time>01:38:52</time>
+  <date>2012-06-03</date>
+  <time>14:58:04</time>
   <version>
-    <release>1.0.4</release>
-    <api>1.0.4</api>
+    <release>1.1.0</release>
+    <api>1.1.0</api>
   </version>
   <stability>
     <release>stable</release>
@@ -24,9 +24,9 @@
   <notes>-</notes>
   <contents>
     <dir name="/">
-      <file name="tests/bootstrap.php" role="test" md5sum="b805c1c4ad52d54cb97ceef8f42e13bb"/>
-      <file name="tests/CascadingAttributeTest.php" role="test" md5sum="5198be47c4fe5a751849f826c9b4e8c7"/>
-      <file name="src/CascadingAttribute.php" role="php" md5sum="c901f391b43310eb0826fd789d43b670"/>
+      <file name="tests/bootstrap.php" role="test" md5sum="1b9228bee72eefe4d41245ba533c35cb"/>
+      <file name="tests/CascadingAttributeTest.php" role="test" md5sum="e1d879b8bb26386e41d5971a7d9cb167"/>
+      <file name="src/CascadingAttribute.php" role="php" md5sum="5418c94321af36f3a9208a78dc9cbe5e"/>
     </dir>
   </contents>
   <dependencies>
@@ -39,11 +39,6 @@
       </pearinstaller>
       <package>
         <name>Universal</name>
-        <channel>pear.corneltek.com</channel>
-        <min>0.0.0</min>
-      </package>
-      <package>
-        <name>PHPUnit_TestMore</name>
         <channel>pear.corneltek.com</channel>
         <min>0.0.0</min>
       </package>
