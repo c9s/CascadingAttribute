@@ -102,6 +102,15 @@ class CascadingAttribute
         }
     }
 
+    public function getAttributeValue($name)
+    {
+        if( property_exists($this,$name) ) {
+            return $this->$name;
+        } elseif ( isset($this->attributes[$name]) ) {
+            return $this->attributes[ $name ];
+        }
+    }
+
     public function setAttribute($name,$args)
     {
         if( isset($this->supportedAttributes[ $name ]) ) 
