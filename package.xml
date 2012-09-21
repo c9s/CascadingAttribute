@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.4.10" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0        http://pear.php.net/dtd/tasks-1.0.xsd        http://pear.php.net/dtd/package-2.0        http://pear.php.net/dtd/package-2.0.xsd">
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.4.10" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0               http://pear.php.net/dtd/tasks-1.0.xsd               http://pear.php.net/dtd/package-2.0               http://pear.php.net/dtd/package-2.0.xsd">
   <name>CascadingAttribute</name>
   <channel>pear.corneltek.com</channel>
   <summary>Cascading Attributes</summary>
@@ -10,11 +10,11 @@
     <email>cornelius.howl@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2012-06-03</date>
-  <time>14:58:32</time>
+  <date>2012-09-22</date>
+  <time>01:17:10</time>
   <version>
-    <release>1.1.0</release>
-    <api>1.1.0</api>
+    <release>1.2.0</release>
+    <api>1.2.0</api>
   </version>
   <stability>
     <release>stable</release>
@@ -26,7 +26,7 @@
     <dir name="/">
       <file name="tests/bootstrap.php" role="test" md5sum="1b9228bee72eefe4d41245ba533c35cb"/>
       <file name="tests/CascadingAttributeTest.php" role="test" md5sum="e1d879b8bb26386e41d5971a7d9cb167"/>
-      <file name="src/CascadingAttribute.php" role="php" md5sum="5418c94321af36f3a9208a78dc9cbe5e"/>
+      <file name="src/CascadingAttribute.php" role="php" md5sum="d24edb79475034b66e76b47b19cad182"/>
     </dir>
   </contents>
   <dependencies>
