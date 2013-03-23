@@ -8,5 +8,9 @@
     ],
     "require": {
 
+    },
+    "require-dev": { "corneltek/phpunit-testmore": "dev-master" },
+    "autoload": {
+        "files": [ "src/CascadingAttribute.php" ]
     }
 }
